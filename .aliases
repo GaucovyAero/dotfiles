@@ -1,7 +1,6 @@
 alias ls='ls -F --color=auto'
 alias ll='ls -lh --color=auto'
 alias lt='ls --human-readable --size -1 -S --classify --color=auto'
-alias vim='nvim'
 alias nsxiv='sw nsxiv'
 alias zathura='sw zathura'
 alias mpv='sw mpw'
