@@ -1,0 +1,37 @@
+Xft*antialias:            true
+Xft*dpi:                  96
+Xft*hinting:		  Full
+Xcursor.theme:            default
+XTerm*background:         #000000
+XTerm*cursorBlink:        true
+XTerm*font:		  -*-terminus-medium-r-normal--*-*-*-*-*-*-*-*
+XTerm*boldFont: 	  -*-terminus-medium-r-normal--*-*-*-*-*-*-*-*
+XTerm*italicFont:	  -*-terminus-medium-r-normal--*-*-*-*-*-*-*-* 
+XTerm*bolditalicFont:	  -*-terminus-medium-r-normal--*-*-*-*-*-*-*-* 
+!XTerm.vt100.faceName:	  xft:Monospace:pixelsize=12:antialias=true:hinting=true
+!XTerm.vt100.faceName:	  DejaVu Sans Mono:size=10:antialias=true
+XTerm*foreground:         #F0F0F0
+XTerm*geometry:           80x24
+XTerm*internalBorder:     6
+XTerm*loginShell:         true
+XTerm*pointerBlank:       true
+XTerm*saveLines:          4000
+XTerm*allowBoldFonts:     false
+XTerm*scrollBar:          false
+XTerm*termName:           xterm
+XTerm*underlineColor:     #86A2BE
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
+
+! blue
+XTerm*color4:             #0000EE
+XTerm*color12:            #5C5CFF
+! white
+XTerm*color7:             #FFFFFF
+XTerm*color15:            #DEDEDE
+
+XTerm*vt100.translations: #override \
+    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
+
+Nsxiv.window.background: #000000
