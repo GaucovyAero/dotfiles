@@ -1,0 +1,4 @@
+#!/bin/sh
+export vblank_mode=0
+cd ~/.steam/steam/steamapps/common/McOsu
+exec ./McEngine

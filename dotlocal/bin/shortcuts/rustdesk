@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /home/aero/.apps/rustdesk-1.2.3-2-x86_64.AppImage
