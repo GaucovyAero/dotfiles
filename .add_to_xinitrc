@@ -7,4 +7,4 @@ redshift -O 3200
 xsetroot -cursor_name left_ptr
 unclutter --timeout 15 &
 
-exec dbus-run-session 
+exec dbus-run-session ratpoison
