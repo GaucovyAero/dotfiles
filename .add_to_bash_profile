@@ -4,8 +4,19 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+export PATH=~/.local/bin:~/.local/bin/shortcuts:~/.local/bin/ocr-scripts:$PATH
+export TERM=xterm-256color
+
 # only if you use ratpoison/StumpWM
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+# export XDG_RUNTIME_DIR
+if [ -z "$XDG_RUNTIME_DIR" ]; then
+	XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir"
+
+	mkdir -pm 0700 "$XDG_RUNTIME_DIR"
+	export XDG_RUNTIME_DIR
+fi
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 startx >> /dev/null 2>&1
