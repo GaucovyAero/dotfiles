@@ -1,0 +1,51 @@
+escape s-z
+
+set font "-*-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*"
+set fgcolor "#ffffff"
+set bgcolor "#000000"
+set msgwait 2
+set border 0
+startup_message off
+
+# Messages in the middle of the screen
+set barborder 0
+set bargravity c
+
+# Vi-key navigation
+unbind k
+bind j focusdown
+bind h focusleft
+bind k focusup
+bind l focusright
+
+# Vi-key tile swapping
+bind J exchangedown
+bind H exchangeleft
+bind K exchangeup
+bind L exchangeright
+bind C-k delete
+
+# Workspaces
+#exec exec rpws init 2 -k
+
+# Move window to the specified Workspace
+#bind C-F1 exec rpws move1
+#bind C-F2 exec rpws move2
+
+# Other keybindings
+#bind F1 exec rpws 1
+#bind F2 exec rpws 2
+
+bind d exec
+bind q kill
+bind E quit
+
+bind Print exec scrot ~/Pictures/Screenshot_%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
+bind s-Print exec scrot -u ~/Pictures/Screenshot_%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
+bind s-S exec scrot -s --freeze ~/Pictures/Screenshot_%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
+
+# Scripts
+
+exec xsetroot -cursor_name left_ptr
+#exec xsetroot -mod 16 10 -bg SkyBlue2 -fg SkyBlue2
+#exec xsetroot -mod 16 10 -bg black -fg black
