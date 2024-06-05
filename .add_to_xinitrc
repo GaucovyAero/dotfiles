@@ -1,10 +1,10 @@
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+xrdb -merge ~/.Xresources
 
 export XDG_SESSION_TYPE=x11
 
 redshift -O 3200
-#xsetroot -mod 16 10 -bg SkyBlue2 -fg SkyBlue2
 xsetroot -cursor_name left_ptr
 unclutter --timeout 15 &
+#numlockx on
 
 exec dbus-run-session ratpoison
