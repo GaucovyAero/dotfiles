@@ -1,0 +1,2 @@
+#!/bin/sh
+exec badwolf http://lite.duckduckgo.com/lite

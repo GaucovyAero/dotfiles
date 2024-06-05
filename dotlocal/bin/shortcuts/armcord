@@ -1,0 +1,2 @@
+#!/bin/sh
+exec flatpak run xyz.armcord.ArmCord

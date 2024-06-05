@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "#!/bin/sh
+exec flatpak run $2" | tee ~/.local/bin/shortcuts/$1
+chmod +x ~/.local/bin/shortcuts/$1
