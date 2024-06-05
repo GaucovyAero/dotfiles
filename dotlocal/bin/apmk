@@ -1,5 +1,0 @@
-#!/bin/sh
-
-echo "#!/bin/sh
-exec $2" | tee ~/.local/bin/$1
-chmod +x ~/.local/bin/$1
