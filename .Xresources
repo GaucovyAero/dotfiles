@@ -4,11 +4,12 @@ Xft*hinting:		  Full
 Xcursor.theme:            default
 XTerm*background:         #000000
 XTerm*cursorBlink:        true
-XTerm*font:		  -*-terminus-medium-r-normal--*-*-*-*-*-*-*-*
-XTerm*boldFont: 	  -*-terminus-medium-r-normal--*-*-*-*-*-*-*-*
-XTerm*italicFont:	  -*-terminus-medium-r-normal--*-*-*-*-*-*-*-* 
-XTerm*bolditalicFont:	  -*-terminus-medium-r-normal--*-*-*-*-*-*-*-* 
+!XTerm*font:		  fixed
+!XTerm*boldFont:		  fixed
+!XTerm*italicFont:	  fixed
+!XTerm*bolditalicFont:	  fixed
 !XTerm.vt100.faceName:	  xft:Monospace:pixelsize=12:antialias=true:hinting=true
+!XTerm.vt100.faceName:	  xft:Terminus:pixelsize=12:antialias=false:hinting=true
 !XTerm.vt100.faceName:	  DejaVu Sans Mono:size=10:antialias=true
 XTerm*foreground:         #F0F0F0
 XTerm*geometry:           80x24
