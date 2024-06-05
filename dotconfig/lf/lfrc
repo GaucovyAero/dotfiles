@@ -1,5 +1,4 @@
 # Basic Settings
-set hidden true
 set ignorecase true
 
 # Custom Functions
@@ -36,17 +35,12 @@ cmd open &{{
 }}
 
 # Bindings
-map c
-map d
 map m
-
-map cf $dotbare fadd -f
 
 map au unarchive
 
 # Basic Functions
-map . set hidden!
-map dD delete
+map <delete> delete
 map p paste
 #map x cut
 map y copy
@@ -54,7 +48,6 @@ map <enter> open
 map R reload
 map mf mkfile
 map md mkdir
-map C clear
 
 # Movement
 map gc cd ~/.config
