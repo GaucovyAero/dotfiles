@@ -1,6 +1,6 @@
 escape s-z
 
-set font "-*-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*"
+set font "terminus-9"
 set fgcolor "#ffffff"
 set bgcolor "#000000"
 set msgwait 2
@@ -37,7 +37,7 @@ bind C-k delete
 #bind F2 exec rpws 2
 
 bind d exec
-bind q kill
+bind q delete
 bind E quit
 
 bind Print exec scrot ~/Pictures/Screenshot_%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
