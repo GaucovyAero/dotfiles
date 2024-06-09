@@ -9,6 +9,7 @@ packages to install and stuff to do:
 disable grub timeout
 disable audio power saving
 install dotfiles
+install/locate ratpoison sloppymove
 install JRE + MC
 
 optional: `imagemagick xdg-desktop-portal flatpak unar thunderbird gamemode wine spotify spicetify obs kdenlive discord/armcord anki handbrake office/tex losslesscut audacity steam osu`
