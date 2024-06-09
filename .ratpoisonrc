@@ -7,9 +7,14 @@ set msgwait 2
 set border 0
 startup_message off
 
+# Format of the windows command - number + resource class of the program
+set winfmt %n - %c
+
 # Messages in the middle of the screen
 set barborder 0
 set bargravity c
+set transgravity nw
+set resizeunit 25
 
 # Vi-key navigation
 unbind k
@@ -24,17 +29,18 @@ bind H exchangeleft
 bind K exchangeup
 bind L exchangeright
 bind C-k delete
+bind Escape abort
 
 # Workspaces
-#exec exec rpws init 2 -k
+exec exec rpws init 2 -k
 
 # Move window to the specified Workspace
-#bind C-F1 exec rpws move1
-#bind C-F2 exec rpws move2
+bind S-F1 exec rpws move1
+bind S-F2 exec rpws move2
 
 # Other keybindings
-#bind F1 exec rpws 1
-#bind F2 exec rpws 2
+bind F1 exec rpws 1
+bind F2 exec rpws 2
 
 bind d exec
 bind q delete
@@ -45,7 +51,6 @@ bind s-Print exec scrot -u ~/Pictures/Screenshot_%Y-%m-%d_%H%M%S.png -e 'xclip -
 bind s-S exec scrot -s --freeze ~/Pictures/Screenshot_%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
 
 # Scripts
-
-exec xsetroot -cursor_name left_ptr
-#exec xsetroot -mod 16 10 -bg SkyBlue2 -fg SkyBlue2
-#exec xsetroot -mod 16 10 -bg black -fg black
+export GDK_CORE_DEVICE_EVENTS=1
+#exec xsetroot -cursor_name left_ptr
+exec sloppymove-bin
