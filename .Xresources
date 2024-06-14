@@ -1,38 +1,102 @@
-Xft*antialias:            true
-Xft*dpi:                  96
-Xft*hinting:		  Full
-Xcursor.theme:            default
-XTerm*background:         #000000
-XTerm*cursorBlink:        true
-!XTerm*font:		  fixed
-!XTerm*boldFont:		  fixed
-!XTerm*italicFont:	  fixed
-!XTerm*bolditalicFont:	  fixed
-!XTerm.vt100.faceName:	  xft:Monospace:pixelsize=12:antialias=true:hinting=true
-!XTerm.vt100.faceName:	  xft:Terminus:pixelsize=12:antialias=false:hinting=true
-!XTerm.vt100.faceName:	  DejaVu Sans Mono:size=10:antialias=true
-XTerm*foreground:         #F0F0F0
-XTerm*geometry:           80x24
-XTerm*internalBorder:     6
-XTerm*loginShell:         true
-XTerm*pointerBlank:       true
-XTerm*saveLines:          4000
-XTerm*allowBoldFonts:     false
-XTerm*scrollBar:          false
-XTerm*termName:           xterm
-XTerm*underlineColor:     #86A2BE
-XTerm.vt100.backarrowKey: false
-XTerm.ttyModes: erase ^?
+! nsxiv background
+Nsxiv.window.background: #000000
+
+! X11 options
+Xft*antialias:		true
+Xft*dpi:		96
+Xft*hinting:		Full
+Xcursor.theme:          CfHPlus
+
+! --- Colors ---
+
+! special
+URxvt*foreground:   #d8dee8
+URxvt*background:   #000000
+*.cursorColor: #d8dee8
+
+! red
+*.color1:       #a54242
+*.color9:       #cc6666
+
+! green
+*.color2:       #8c9440
+*.color10:      #b5bd68
+
+! yellow
+*.color3:       #de935f
+*.color11:      #f0c674
 
 ! blue
-XTerm*color4:             #0000EE
-XTerm*color12:            #5C5CFF
+*.color4:       #5f819d
+*.color12:      #81a2be
+
+! magenta
+*.color5:       #85678f
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #5e8d87
+*.color14:      #8abeb7
+
 ! white
-XTerm*color7:             #FFFFFF
-XTerm*color15:            #DEDEDE
+*.color7:       #707880
+*.color15:      #c5c8c6
 
-XTerm*vt100.translations: #override \
-    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
-    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
+! --- URxvt options ---
 
-Nsxiv.window.background: #000000
+! Fonts
+URxvt.font:		xft:Terminus:size=9:style=Regular
+URxvt.boldFont:		xft:Terminus:size=9:style=Regular
+URxvt.italicFont:	xft:Terminus:size=9:style=Regular
+URxvt.boldItalicFont:	xft:Terminus:size=9:style=Regular
+
+! Appearance
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.internalBorder: 4
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+
+! Common Keybinds for Navigations
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Control-Left: \033[1;5D
+
+! Copy Paste & Other Extensions
+URxvt.perl-ext-common: default,clipboard,-confirm-paste
+
+! Disable Ctrl-Alt-c & Ctrl-Alt-v bindings (optional)
+URxvt.keysym.C-M-c:    builtin-string:
+URxvt.keysym.C-M-v:    builtin-string:
+
+! Bind Ctrl-Shift-c & Ctrl-Shift-v to copy and paste
+! I dont know why, but I needed to use hex keysym values to get it to work
+URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
+URxvt.keysym.C-S-0x56: eval:paste_clipboard
+
+! --- URxvt workarounds ---
+
+URxvt.title: urxvt
+
+! Workaround text showing in the middle on a tiling WM
+URxvt.geometry: 400x400
+
+! Disable ISO 14755 unicode input so we can use Ctrl-Shift bindings
+URxvt.iso14755:        false
+URxvt.iso14755_52:     false
+
+! URxvt disable automatic scroll on output
+URxvt.scrollTtyOutput:   False
+URxvt.scrollWithBuffer:  True
+URxvt.scrollTtyKeypress: True
+
+! Enable some standard terminal behavior
+URxvt.secondaryScroll:	false
