@@ -1,18 +1,8 @@
 # Basic Settings
 set ignorecase true
 
-# Custom Functions
-cmd mkdir ${{
-  printf "Directory Name: "
-  read ans
-  mkdir $ans
-}}
-
-cmd mkfile ${{
-  printf "File Name: "
-  read ans
-  $EDITOR $ans
-}}
+cmd mkdir %IFS=" "; mkdir -- "$*"
+cmd mkfile %IFS=" "; touch  -- "$*"
 
 # Archive bindings
 cmd unarchive ${{
@@ -27,13 +17,6 @@ cmd unarchive ${{
   esac
 }}
 
-cmd open &{{
-	case $(file --mime-type -Lb $f) in
-		text/*) lf -remote "send $id \$nvim \$fx";;
-		*) xdg-open "$f"
-	esac
-}}
-
 # Bindings
 map m
 
@@ -42,12 +25,14 @@ map au unarchive
 # Basic Functions
 map <delete> delete
 map p paste
-#map x cut
+map D delete
 map y copy
 map <enter> open
 map R reload
-map mf mkfile
-map md mkdir
+#map mf mkfile
+#map md mkdir
+map md push :mkdir<space>
+map mf push :mkfile<space>
 
 # Movement
 map gc cd ~/.config
