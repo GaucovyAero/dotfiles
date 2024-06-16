@@ -58,3 +58,4 @@ bind s-S exec scrot -s --freeze ~/Pictures/Screenshot_%Y-%m-%d_%H%M%S.png -e 'xc
 export GDK_CORE_DEVICE_EVENTS=1
 #exec xsetroot -cursor_name left_ptr
 #exec ratpoison-sloppymove
+exec xsetroot -solid Teal
