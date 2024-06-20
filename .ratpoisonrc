@@ -17,7 +17,7 @@ set winfmt %n - %c
 set barborder 0
 set bargravity c
 set transgravity nw
-set resizeunit 125
+set resizeunit 126
 
 # Vi-key navigation
 unbind k
@@ -57,5 +57,5 @@ bind s-S exec scrot -s --freeze ~/Pictures/Screenshot_%Y-%m-%d_%H%M%S.png -e 'xc
 # Scripts
 export GDK_CORE_DEVICE_EVENTS=1
 #exec xsetroot -cursor_name left_ptr
-#exec ratpoison-sloppymove
+exec ratpoison-sloppymove
 exec xsetroot -solid Teal
