@@ -17,6 +17,13 @@ cmd unarchive ${{
   esac
 }}
 
+cmd open &{{
+	case $(file --mime-type -Lb $f) in
+		text/*) lf -remote "send $id \$nvim \$fx";;
+		*) xdg-open "$f"
+	esac
+}}
+
 # Bindings
 map m
 
