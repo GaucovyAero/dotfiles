@@ -1,0 +1,9 @@
+#!/bin/sh
+
+case "$1" in
+        "C-r")	magick -rotate 90 "$file" "$file" ;;
+        "C-c")	while read -r file; do xclip -selection clipboard -t image/png "$file" & done ;;
+	"C-x")	killall xclip ;;
+	"C-e")	while read -r file; do gimp "$file" & done ;;
+	"C-d")	while read -r file; do trash-put "$file" && read -r file; trash-put "$file" > /dev/null 2>&1 & done ;;
+esac
