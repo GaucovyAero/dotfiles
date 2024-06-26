@@ -1,0 +1,5 @@
+#!/bin/sh
+lsblk
+echo -n "Drive to unmount? "
+read -r drive
+udiskie-umount /dev/$drive

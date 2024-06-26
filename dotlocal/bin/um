@@ -1,0 +1,5 @@
+#!/bin/sh
+lsblk
+echo -n "Drive to mount? "
+read -r drive
+udiskie-mount /dev/$drive
