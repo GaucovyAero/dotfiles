@@ -1,5 +1,7 @@
 # Basic Settings
 set ignorecase true
+set number
+set relativenumber
 
 cmd mkdir %IFS=" "; mkdir -- "$*"
 cmd mkfile %IFS=" "; touch  -- "$*"
@@ -7,7 +9,7 @@ cmd mkfile %IFS=" "; touch  -- "$*"
 # Archive bindings
 cmd unarchive ${{
   case "$f" in
-      *.zip) unzip "$f" ;;
+      *.zip) unzip "$f" -d "$f-exdir";;
       *.rar) unrar x "$f" ;;
       *.tar.gz) tar -xzvf "$f" ;;
       *.tar.bz2) tar -xjvf "$f" ;;
@@ -47,4 +49,8 @@ map gD cd ~/Documents
 map gd cd ~/Downloads
 map gp cd ~/Pictures
 map gv cd ~/Videos
-map gs cd ~/.local/bin
+map gs cd /run/media/aero
+map gb cd ~/.local/bin
+map go cd ~/.local/share/osu-wine/osu!
+map gp cd ~/.local/share
+map gm cd ~/.local/share/PrismLauncher
