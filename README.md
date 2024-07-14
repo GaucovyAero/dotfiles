@@ -14,5 +14,5 @@ install dotfiles \
 install/locate ratpoison sloppymove \
 install JRE + MC
 
-optional: `imagemagick thunderbird wine spotify spicetify obs kdenlive discord/vesktop handbrake office/tex losslesscut audacity steam osu`
+optional: `imagemagick thunderbird wine spotify spicetify obs kdenlive discord/vesktop handbrake office/tex losslesscut audacity steam osu` \
 outdated for now: `anki flatpak unar xdg-desktop-portal gamemode`
