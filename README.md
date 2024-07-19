@@ -2,7 +2,7 @@
 
 packages to install and stuff to do:
 
-`xorg ratpoison pipewire-audio rtkit dbus-x11 rxvt-unicode urxvt-perls lf calc nsxiv gimp firefox mpv zip unzip p7zip scrot xclip redshift neovim zathura zathura-pdf-mupdf htop git wget unclutter udiskie numlockx`
+`xorg-minimal ratpoison pipewire-audio rtkit dbus-x11 rxvt-unicode urxvt-perls lf calc nsxiv gimp firefox mpv zip unzip p7zip scrot xclip redshift neovim zathura zathura-pdf-mupdf htop git wget unclutter udiskie numlockx`
 
 mesa + drivers for hw video accel, vulkan, psmisc, linux-util-misc (alpine), build-base, sensors, xdg-utils
 
