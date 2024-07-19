@@ -1,0 +1,2 @@
+#!/bin/sh
+wine ~/.wine/drive_c/Program\ Files/Codemasters/Colin\ McRae\ Rally\ 04/cmr4.exe
