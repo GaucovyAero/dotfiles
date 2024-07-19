@@ -11,7 +11,8 @@ startup_message off
 set shrink
 
 # Format of the windows command - number + resource class of the program
-set winfmt %n - %c
+set winfmt %n - %c: %t
+set infofmt (%H, %W) %n(%c - %a) -- PID: %p, XWID: %i
 
 # Messages in the middle of the screen
 set barborder 0
@@ -35,15 +36,19 @@ bind C-k delete
 bind Escape abort
 
 # Workspaces
-exec exec rpws init 2 -k
+exec exec rpws init 4 -k
 
 # Move window to the specified Workspace
 bind S-F1 exec rpws move1
 bind S-F2 exec rpws move2
+bind S-F3 exec rpws move3
+bind S-F4 exec rpws move4
 
 # Other keybindings
 bind F1 exec rpws 1
 bind F2 exec rpws 2
+bind F3 exec rpws 3
+bind F4 exec rpws 4
 
 bind d exec
 bind c exec urxvt
@@ -55,7 +60,9 @@ bind s-Print exec scrot -u ~/Pictures/Screenshot_%Y-%m-%d_%H%M%S.png -e 'xclip -
 bind s-S exec scrot -s --freeze ~/Pictures/Screenshot_%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
 
 # Scripts
-export GDK_CORE_DEVICE_EVENTS=1
+exec export GDK_CORE_DEVICE_EVENTS=1
 #exec xsetroot -cursor_name left_ptr
 exec ratpoison-sloppymove
-exec xsetroot -solid Teal
+exec wmname LG3D
+#exec xsetroot -solid Teal
+exec xsetroot -bitmap ~/.other/bliss.xbm -bg "#073642" -fg "#345345"
