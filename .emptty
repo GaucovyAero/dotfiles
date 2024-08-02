@@ -1,0 +1,5 @@
+#!/bin/sh
+Environment=xorg
+Name=ratpoison
+source ~/.bash_profile
+source ~/.xinitrc
