@@ -5,5 +5,5 @@ case "$1" in
         "C-c")	while read -r file; do xclip -selection clipboard -t image/png "$file" & done ;;
 	"C-x")	killall xclip ;;
 	"C-e")	while read -r file; do gimp "$file" & done ;;
-	"C-d")	while read -r file; do trash-put "$file" && read -r file; trash-put "$file" > /dev/null 2>&1 & done ;;
+	"C-d")	while read -r file; do mv "$file" ~/.local/share/Trash/files && read -r file; mv "$file" ~/.local/share/Trash/files > /dev/null 2>&1 & done ;;
 esac
